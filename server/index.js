@@ -63,6 +63,11 @@ app.use(subpath, express.static(buildPath));
 // ✅ Use PORT from config OR env
 const PORT = process.env.PORT || config.PORT || 4000;
 
+const fs = require('fs');
+
+const logLine = `PORT: ${PORT}\nSUBPATH: ${subpath}\n`;
+fs.writeFileSync('./tmp/debug_log.txt', logLine);
+
 
 // ✅ Start server with readable timestamp
 app.listen(PORT, () => {
