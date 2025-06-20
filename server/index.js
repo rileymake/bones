@@ -65,11 +65,12 @@ app.use(subpath, express.static(buildPath));
 let PORT;
 if (process.env.PORT) {
   PORT = process.env.PORT;
-  console.log(`✅ PORT comes from process.env.PORT: ${PORT}`);
+  console.error(`✅ PORT comes from process.env.PORT: ${PORT}`);
 } else {
   PORT = config.PORT || 4000;
-  console.log(`✅ PORT comes from config.PORT or fallback: ${PORT}`);
+  console.error(`✅ PORT comes from config.PORT or fallback: ${PORT}`);
 }
+
 
 const fs = require('fs');
 
