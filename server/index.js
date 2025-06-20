@@ -75,7 +75,8 @@ if (process.env.PORT) {
 const fs = require('fs');
 
 const logLine = `PORT: ${PORT}\nSUBPATH: ${subpath}\n`;
-fs.writeFileSync('./tmp/debug_log.txt', logLine);
+fs.writeFileSync('/home/rileymak/logs/bones_debug_log.txt', logLine);
+
 
 
 // ✅ Start server with readable timestamp
