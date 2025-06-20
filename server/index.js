@@ -74,4 +74,9 @@ app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}${subpath}`);
   console.log(`Expected test route: ${subpath}api/hello`);
   console.log(`Started at: ${timestamp}`);
+  console.log('✅ Live config check:');
+  console.log('PORT:', PORT);
+  console.log('SUBPATH:', subpath);
+  console.log('Full test route should be:', `${subpath}api/hello`);
+
 });
