@@ -61,7 +61,13 @@ const buildPath = path.join(__dirname, '..', 'client', 'build');
 app.use(subpath, express.static(buildPath));
 
 // ✅ Use PORT from config OR env
-const PORT = process.env.PORT || config.PORT || 4000;
+// ✅ Use process.env.PORT on production, fallback to config or 4000
+let PORT;
+if (process.env.PORT) {
+  PORT = process.env.PORT;
+} else {
+  PORT = config.PORT || 4000;
+}
 
 const fs = require('fs');
 
