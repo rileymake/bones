@@ -1,0 +1,13 @@
+{
+  "PUBLIC_URL": "/dev",
+  "SUBPATH": "/dev",
+  "PORT": 4000,
+  "TEST_KEY": "works",
+  "DB": {
+    "user": "postgres",
+    "password": "MeerCats1!",
+    "host": "localhost",
+    "port": 5432,
+    "database": "db_rileymake"
+  }
+}
