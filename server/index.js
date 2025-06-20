@@ -60,8 +60,9 @@ app.get(`${subpath}api/db-test`, async (req, res) => {
 const buildPath = path.join(__dirname, '..', 'client', 'build');
 app.use(subpath, express.static(buildPath));
 
-// ✅ Use PORT from config
-const PORT = config.PORT || 4000;
+// ✅ Use PORT from config OR env
+const PORT = process.env.PORT || config.PORT || 4000;
+
 
 // ✅ Start server with readable timestamp
 app.listen(PORT, () => {
